@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "prod_name": "iphone 11",
+      "prod_desc": "A mobile phone.",
+      "manufacturer": "Apple",
+      "price": "100000",
+      "quantity": "1",
+      "id": 1
+    },
+    {
+      "prod_name": "Mi 10T",
+      "prod_desc": "A Mobile phone",
+      "manufacturer": "MI",
+      "price": "35000",
+      "quantity": "1",
+      "id": 2
+    },
+    {
+      "prod_name": "Realme 7",
+      "prod_desc": "A good mobile phone for 2020",
+      "manufacturer": "Realme",
+      "price": "16000",
+      "quantity": "1",
+      "id": 3
+    },
+    {
+      "prod_name": "Realme 8",
+      "prod_desc": "A good mobile phone..",
+      "manufacturer": "Realme",
+      "price": "18000",
+      "quantity": "1",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

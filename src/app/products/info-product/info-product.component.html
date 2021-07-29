@@ -1,0 +1,36 @@
+
+<h1 style="text-align: center;" data-test="product">Product Information</h1>
+<div class="container-fluid" *ngIf="productData as prod" >
+   
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">Id</div>
+       
+        <div class="col-sm-6" style="background-color:rgb(165, 165, 197);">{{prod.id}}</div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">Product Name</div>
+       
+        <div class="col-sm-6" style="background-color:rgb(165, 165, 197);">{{productData.prod_name}}</div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">Product Description</div>
+       
+        <div class="col-sm-6" style="background-color:rgb(165, 165, 197);">{{productData.prod_desc}}</div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">Product Manufacturer</div>
+       
+        <div class="col-sm-6" style="background-color:rgb(165, 165, 197);">{{productData.manufacturer}}</div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">Product Price</div>
+       
+        <div class="col-sm-6" style="background-color:rgb(165, 165, 197);">{{productData.price}}</div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lavender;">Product Quantity</div>
+       
+        <div class="col-sm-6" style="background-color:rgb(165, 165, 197);">{{productData.quantity}}</div>
+    </div><br>
+    
+  </div>

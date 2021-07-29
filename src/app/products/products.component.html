@@ -1,0 +1,24 @@
+
+
+<div class="container-fluid">
+  <input  type="text" name="search" [(ngModel)]="searchText" 
+  autocomplete="off" placeholder="  Search" data-test="searchBar">
+  <i style="margin-left: 50px;" class="fa fa-bar-chart"  (click)="graphDialog()" aria-hidden="true" data-test="graph"></i>
+  <br><br>
+    <div class="row" data-test="products">
+        <div class="col-sm-3" style="background-color:lavender;">Id</div>
+        <div class="col-sm-3" style="background-color:lavenderblush;">Product Name</div>
+        <div class="col-sm-3" style="background-color:lavender;">Product Price</div>
+        
+    </div>
+
+    <div class="row" *ngFor="let product of allProducts | filter:searchText">
+      <div class="col-sm-3" style="background-color:lavender;"><a [routerLink]="['/products/infoproduct', product.id]">{{product.id}}</a></div>
+      <div class="col-sm-3" style="background-color:lavenderblush;">{{product.prod_name}}</div>
+      <div class="col-sm-3" style="background-color:lavender;">{{product.price}}</div>
+      <div class="col-sm-3"  *ngIf="checkLoggedIn()"><button [routerLink]="['/products/editproduct', product.id]" style="height: 20px;"><i class="fa fa-edit"></i></button> <button (click)="delete(product.id)" style="height: 20px;"><i class="fa fa-trash"></i></button> </div>
+    </div>
+    
+  </div>
+  <hr>
+<a *ngIf="checkLoggedIn()" href="products/addproduct">Add Product<a>

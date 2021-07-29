@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "abc"
+    },
+    {
+      "user_name": "junedmullani@gmail.com",
+      "user_password": "123456",
+      "user_fname": "Juned",
+      "user_lname": "Mullani",
+      "user_phone": "+918412820511",
+      "id": 2
+    },
+    {
+      "user_name": "abc@gmail.com",
+      "user_password": "123456",
+      "user_fname": "ab",
+      "user_lname": "c",
+      "user_phone": "1234567890",
+      "id": 3
+    },
+    {
+      "user_name": "pqr@gmail.com",
+      "user_password": "1234",
+      "user_fname": "pq",
+      "user_lname": "r",
+      "user_location": "Pune",
+      "user_phone": "1234567890",
+      "id": 4
+    }
+  ]
+}

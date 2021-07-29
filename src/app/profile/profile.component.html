@@ -1,0 +1,15 @@
+<div style="text-align: center;">
+    <h2>My Profile</h2><br>
+
+<div class="card" style="width: 18rem;" data-test="userProfile">
+    <ul class="list-group list-group-flush" *ngFor="let user of myProfile">
+    
+      <li class="list-group-item">{{user.user_name}}</li>
+      <li class="list-group-item">{{user.user_fname}}</li>
+      <li class="list-group-item">{{user.user_lname}}</li>
+      <li class="list-group-item">{{user.user_location}}</li>
+      <li class="list-group-item">{{user.user_phone}}</li>
+    </ul>
+  </div>
+
+</div>

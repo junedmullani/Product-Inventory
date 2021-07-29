@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()" data-test="form">
+  <div class="container">
+    <h1>Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email Id</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="signupForm.get('user_name').hasError('required') && signupForm.get('user_name').touched && !signupForm.get('user_name').pristine ">
+      Email Id is Required
+      </p>
+    <input type="email"  name="email" id="email" formControlName="user_name" required>
+
+    <label for="psw"><b>Password</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="signupForm.get('user_password').hasError('required') && signupForm.get('user_password').touched ">
+      Password is Required
+      </p>
+    <input type="password"  name="psw" id="psw" formControlName="user_password" required>
+
+    
+    <label for="First Name"><b>First Name</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="signupForm.get('user_fname').hasError('required') && signupForm.get('user_fname').touched ">
+      First Name is Required
+      </p>
+    <input type="text"  name="fname" id="fname" formControlName="user_fname" required>
+
+    <label for="Last Name"><b>Last Name</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="signupForm.get('user_lname').hasError('required') && signupForm.get('user_lname').touched">
+      Last Name is Required
+      </p>
+    <input type="text"  name="lname" id="lname" formControlName="user_lname" required>
+
+    <label for="location"><b>Location</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="signupForm.get('user_location').hasError('required') && signupForm.get('user_location').touched">
+      Location is Required
+      </p>
+    <input type="text"  name="location" id="lname" formControlName="user_location" required>
+
+    <label for="Mobile Number"><b>Mobile Number</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="signupForm.get('user_phone').hasError('required') && signupForm.get('user_phone').touched">
+      Mobile Number is Required
+      </p>
+    <input type="text"  name="mno" id="mno" formControlName="user_phone" required>
+
+    <button type="submit" class="registerbtn" [disabled]="signupForm.invalid">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="login">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>

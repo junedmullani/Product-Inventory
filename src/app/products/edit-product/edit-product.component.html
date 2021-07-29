@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+<form [formGroup]="addProduct" (ngSubmit)="onSubmit()" data-test="editForm">
+  <div class="container">
+    <h1>Add Product</h1>
+    
+    <hr>
+
+    <label for="prod_name"><b>Product Name</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="addProduct.get('prod_name').hasError('required') && addProduct.get('prod_name').touched ">
+      Product Name is Required
+      </p>
+    <input type="text"   name="prod_name" id="prod_name" formControlName="prod_name" required>
+
+    <label for="prod_desc"><b>Product Description</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="addProduct.get('prod_desc').hasError('required') && addProduct.get('prod_desc').touched ">
+      Product Description is Required
+      </p>
+    <input type="text"  name="prod_desc" id="prod_desc" formControlName="prod_desc" required>
+
+    
+    <label for="Manufacturer"><b>Manufacturer</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="addProduct.get('manufacturer').hasError('required') && addProduct.get('manufacturer').touched ">
+      Manufacturer is Required
+      </p>
+    <input type="text"  name="manufacturer" id="manufacturer" formControlName="manufacturer" required>
+
+    <label for="Price"><b>Price</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="addProduct.get('price').hasError('required') && addProduct.get('price').touched">
+      Price is Required
+      </p>
+    <input type="text"  name="price" id="price" formControlName="price" required>
+
+    <label for="Quantity"><b>Quantity</b><span style="color: red;">*</span></label>
+    <p style="color: red;" *ngIf="addProduct.get('quantity').hasError('required') && addProduct.get('quantity').touched">
+      Quantity is Required
+      </p>
+    <input type="text"  name="quantity" id="quantity" formControlName="quantity" required>
+
+    <button type="submit" class="registerbtn" [disabled]="addProduct.invalid">Edit Product</button>
+  </div>
+  
+</form>
+
+</body>
+</html>
